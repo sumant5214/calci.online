@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="exp7style.css">
+</head>
+<body>
+    <script>
+        function checkfunc(){
+            var main = document.getElementById("ta");
+            var val = document.getElementById("tf").value;
+            //var mainstr = document.getElementById("ta").value;
+             
+            var str = main.value.search(val);
+            main.focus();
+            alert(val.length);
+            main.setSelectionRange(parseInt(str),parseInt(str)+parseInt(val.length));
+            
+        }
+    </script>
+    <div class="mdiv">
+        <h4>Write a JS to check particular character is present in a string or not ?</h4> 
+        <input type="text" name="" id="tf" placeholder="Enter text to be searched">
+        <input type="button" class="but" value="Search" onclick="checkfunc()"> 
+        <br><br>
+        <textarea name="" id="ta" cols="30" rows="10" placeholder="Enter text"></textarea>
+        <br><br>
+        <b>Executed by Roll no.: 55</b>
+    </div>
+</body>
+</html>

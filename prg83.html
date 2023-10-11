@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exp8style.css">
+</head>
+
+<body>
+    <script>
+        var win;
+        function opwin(){
+            win = window.open("","","width=300,height=200");
+        }
+        function clwin(){
+            win.close();
+        }
+        function resby(){
+            win.resizeBy(100,100);
+            win.focus();
+        }
+        function resto(){
+            win.resizeTo(300,200);
+            win.focus();
+        }
+    </script>
+    <div class="mdiv">
+        <h3>Write a program to reize a window</h3>
+        <input class="but" type="button" value="Open Window" onclick="opwin()">
+        <input class="but" type="button" value="Close Window" onclick="clwin()">
+        <br><br>
+        <input class="but" id="butcls" type="button" value="Resize by" onclick="resby()">
+        <input class="but" id="butcls" type="button" value="Resize to" onclick="resto()">
+        <br><br>
+        <b>Executed by Roll no.: 55</b>
+    </div>
+</body>
+
+</html>

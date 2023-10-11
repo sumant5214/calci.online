@@ -1,0 +1,60 @@
+body{
+    background-color: burlywood;
+    margin: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.mdiv{
+    background-color: wheat;
+    width: max-content;
+    border-radius: 10px;
+    width: 350px;
+    box-shadow: 2px 2px 15px black;
+    padding: 10px;
+    display: flex;
+}
+.but{
+    background-color: purple;
+    border-style: none;
+    border-radius: 5px;
+    width: min-content;
+    height: 30px;
+    font-weight: 700;
+    color: whitesmoke;
+    cursor: pointer;
+}
+.but:hover{
+    background-color: rgba(126, 86, 126, 0.5);
+}
+#butcls{
+    background-color: blue;
+}
+#butcls:hover{
+    background-color: rgba(114, 114, 255, 0.5);
+}
+img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 900;
+    top: 290;
+}
+.info{
+    position: absolute;
+    width: max-content;
+    height: max-content;
+    background-color: whitesmoke;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 10px;
+    left: 850;
+    top: 310;
+    display: none;
+    visibility: hidden;
+    box-shadow: 2px 2px 15px black;
+}

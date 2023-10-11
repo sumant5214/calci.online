@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0%;
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: wheat;
+        }
+        .mdiv{
+            display: flex;
+            background-color: antiquewhite;
+            flex-direction: column;
+            border-radius: 10px;
+            box-shadow: 7px 7px 20px black;
+            width: max-content;
+            height: auto;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+    </style>
+    <script>
+        function colorchg(id){
+            //getElementById(id).style.backgroundColor
+            document.querySelector(".mdiv").backgroundColor = 'wheat';
+        }
+        function colorrechg(id){
+            document.getElementById(id).style.backgroundColor = 'white';
+        }
+        function upcase(id){
+            var str = new String(document.getElementById("fnm").value);
+            document.getElementById("fnm").value = str.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+    <div class="mdiv">
+        <form name="Mform" action="prg1.html">
+            <table style="display: flex; justify-content: center;">
+                <div style="display: flex;justify-content: center;align-items: center;">
+                    <h2>CO Sem-5 Feedback Form</h2>
+                </div>
+                <tr> 
+                    <td>Enter Name : </td><td><input type="text" name="funame" id="fnm" onfocus="colorchg(this.id)" onblur="colorrechg(this.id)" onkeyup="upcase(this.value)" required></td>
+                </tr>
+                <tr>
+                    <td>Enter Email-ID : </td><td><input type="email" name="eid" id="eid" onfocus="colorchg(this.id)" onblur="colorrechg(this.id)" required></td>
+                </tr>
+                <tr>
+                    <td>Which course was <br> interesting ? : </td>
+                </tr>
+                <tr>
+                    <td>AJP</td><td><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>CSS</td><td><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>OSY</td><td><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>STE</td><td><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>EST</td><td><input type="checkbox" name="" id=""></td>
+                </tr>
+                <tr>
+                    <td>Class : </td><td>CO5I-A <input type="radio" name="1" >CO5I-B <input type="radio" name="1" ></td>
+                </tr>
+                <tr style="width: 100%;">
+                    <td style="display: flex;justify-content: center;"><img style="width: 120px;" src="submit.png" onclick="javascript:document.forms.Mform.submit()"></td><td><img style="width: 70px;" src="reset.png" alt="" srcset="" onclick="javascript:document.forms.Mform.reset()"></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

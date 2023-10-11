@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exp8style.css">
+</head>
+<body>
+    <script>
+        var ctr;
+        var win;
+        function opwin(){
+            win = window.open("https://www.somaiya.edu/en","","width=400,height=300");
+            ctr = 0;
+        }
+        function chgcon(){
+            if(ctr == 0){
+                win.location.replace("https://ves.ac.in/polytechnic/");
+                ctr=1;
+                win.focus();
+            }
+            else{
+                win.location.replace("https://www.somaiya.edu/en");
+                ctr=0;
+                win.focus();
+            }
+        }
+    </script>
+    <div class="mdiv">
+        <h3>Change the content of the window</h3>
+        <input type="button" class="but" value="Show College" onclick="opwin()">
+        <input type="button" class="but" id="butcls" value="View More" onclick="chgcon()">
+        <br><br>
+        <b>Executed by Roll no.: 55</b>
+    </div>
+</body>
+</html>
+

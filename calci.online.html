@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calci.online</title>
+    <script src="calci.online.js"></script>
+    <link href="https://db.onlinewebfonts.com/c/1b40984d7a10bcae004877dc48f4cc8f?family=DigitalICG" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/a4e40941cd04772dbe49aa5790ad5905?family=OPTICalculator" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/19de45a392ba014cc9f1596115291c86?family=Pocket+Calculator" rel="stylesheet" type="text/css"/>
+    <link href="https://db.onlinewebfonts.com/c/ce4b0ee545ec52c2ec8cec62d23ffb09?family=Calculator" rel="stylesheet
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="calci.online.css">
+    <link rel="shortcut icon" href="cal.png" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+            Calci.online
+        </h1>
+        <nav>
+            <span>
+                <div class="lsi">
+                    <button type="submit" class="hide" id="lb" onclick="window.location.href='calci.online.html'">Home</button>
+                    <button type="submit" class="hide" id="lb" onclick="window.location.href='Aboutus.html'">About Us</button>
+                    <button type="submit" class="hide" id="lb" onclick="window.location.href='Contactus.html'">Contact Us</button>
+                </div>
+            </span>
+        </nav>
+    </header>
+    <div class="main">
+        <div class="calci">
+            <div class="name">
+                Calci.online
+            </div>
+            <div class="grid-display" id="display">
+                <div>
+                    <h3 class="discontent" id="d1"></h3>
+                </div>
+                <div>
+                    <h2 class="discontent" id="d2"></h2>
+                </div>
+            </div>
+            <div class="butAC" id="butdiv">
+                <input type="button" value="AC" name="ins2" onclick="location.reload()">
+            </div>
+            <div class="butDEL" id="butdiv">
+                <input type="button" value="DEL" name="ins2" onclick="undo()">
+            </div>
+            <div class="butOff" id="butdiv">
+                <input type="button" value="Off" name="ins2" onclick="off();">
+            </div>
+            <div class="butNA" id="butdiv">
+                <input type="button" value="π" name="ins2" onclick="typer(3.1415926535897932384626433832795);">
+            </div>
+            
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="(" onclick="typer(this.value);"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value=")" onclick="typer(this.value);"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="xʸ" onclick="typer('^')"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="√" onclick="squaroot()"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="log" onclick="logged()"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="MOD" onclick="typer('%')"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="&#119899;!" onclick="fact()"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="e" onclick="typer(2.7182818284590452353602874713527);"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="x²" onclick="squared()"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="&#185;/ₓ" onclick="onebyx()"></div>
+                <!-- <div class="button" id="butdiv"><input type="button" name="ins2" value="Trigonometry" style="font-size: 10px;"></div>
+                <div class="button" id="butdiv"><input type="button" name="ins2" value="π"></div> -->
+            
+            <div class="butplus" id="butdiv">
+                <input type="button" value="+" name="ins2" onclick="typer('+'); ">
+            </div>
+            <div class="butminus" id="butdiv">
+                <input type="button" value="-" name="ins2" onclick="typer('-'); ">
+            </div>
+            <div class="butdivide" id="butdiv">
+                <input type="button" value="÷" name="ins2" onclick="typer('÷'); ">
+            </div>
+            <div class="butmul" id="butdiv">
+                <input type="button" value="*" name="ins2" onclick="typer('*'); ">
+            </div>
+            <div class="butequal" id="butdiv">
+                <input type="button" value="=" name="ins1" onclick="calc()">
+            </div>
+            <div class="butdecimal" id="butdiv">
+                <input type="button" value="." name="ins1" onclick="typer('.');checkctr('.')">
+            </div>
+            <div class="but0" id="butdiv">
+                <input type="button" value="0" name="num" onclick="typer(0);">
+            </div>
+            <div class="but1" id="butdiv">
+                <input type="button" value="1" name="num" onclick="typer(1);">
+            </div>
+            <div class="but2" id="butdiv">
+                <input type="button" value="2" name="num" onclick="typer(2);">
+            </div>
+            <div class="but3" id="butdiv">
+                <input type="button" value="3" name="num" onclick="typer(3);">
+            </div>
+            <div class="but4" id="butdiv">
+                <input type="button" value="4" name="num" onclick="typer(4);">
+            </div>
+            <div class="but5" id="butdiv">
+                <input type="button" value="5" name="num" onclick="typer(5);">
+            </div>
+            <div class="but6" id="butdiv">
+                <input type="button" value="6" name="num" onclick="typer(6);">
+            </div>
+            <div class="but7" id="butdiv">
+                <input type="button" value="7" name="num" onclick="typer(7);">
+            </div>
+            <div class="but8" id="butdiv">
+                <input type="button" value="8" name="num" onclick="typer(8);">
+            </div>
+            <div class="but9" id="butdiv">
+                <input type="button" value="9" name="num" onclick="typer(9);">
+            </div>
+        </div>
+    </div>
+    <div class="end">
+        <footer style="font-size: x-small;">
+            Copyright &#169; 2023, Calci.online. All Rights Reserved. 
+        </footer>
+    </div>
+</body>
+</html>

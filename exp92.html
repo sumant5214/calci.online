@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exp7style.css">
+</head>
+<body>
+    <script>
+        function checkfunc(){
+            var num = document.getElementById("tf");
+            var myRegex = new RegExp("[0-9]");
+            if(myRegex.test(num.value)){
+                document.getElementById("op").innerHTML = "<font style='color:green'><b>Yes</b></font><br><br>"
+            }
+            else{
+                document.getElementById("op").innerHTML = "<font style='color:red'><b>No</b></font><br><br>"
+            }
+        }
+    </script> 
+    <div class="mdiv">
+        <h4>Write a JS to check particular character is present in a string or not ?</h4> 
+        <input type="text" name="" id="tf" placeholder="Enter text to be searched">
+        <input type="button" class="but" value="Search" onlick="checkfunc()"> 
+        <br><br>
+        <span id="op"></span>
+        <b>Executed by Roll no.: 55</b>
+    </div>
+</body>
+</html>

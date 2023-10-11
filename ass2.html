@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body></body>
+    <script>
+        function chgcolor(val){
+            document.body.style.backgroundColor = val;
+        }
+    </script>
+    <select name="colorop" id="selcol" value="selct" onchange="chgcolor(this.value)">
+        <option selected disabled>Select Color</option>
+        <option value="red">Red</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+    </select>
+</body>
+</html>

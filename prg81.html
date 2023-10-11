@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="exp8style.css">
+</head>
+<body>
+    <script>
+        var win,wintemp;
+        function opwin() {
+            var lab = document.getElementById("lb");
+            win = window.open("https://ves.ac.in/polytechnic/","","width=200,height=200");
+            lab.innerHTML = "<font style='color :green;'>Window has been opened</font>";
+            wintemp = win; 
+        }
+        function clwin(){
+            var lab = document.getElementById("lb");
+            if(!win){
+                lab.innerHTML = "<font style='color :red;'>Window not found</font>"; 
+            }
+            else{
+                lab.innerHTML = "<font style='color :green;'>Window has been closed</font>";
+                win.close();
+            }
+            wintemp = win;
+            win = null;
+        }
+        function checkwin(){
+            var lab = document.getElementById("lb");
+            if(!wintemp){
+                lab.innerHTML = "<font style='color :red;'>Window not found</font>";
+
+            }
+            else{
+                if(wintemp.closed){
+                    lab.innerHTML = "<font style='color :red;'>Window is closed</font>"; 
+                }
+                else{
+                    lab.innerHTML = "<font style='color :green;'>Window is open</font>";
+                    win.focus();
+                }
+            }
+
+        }
+    </script>
+    <div class="mdiv">
+        <div class="h3">
+            <h3>Check whether the new window has been closed or not</h3>
+        </div>
+        <input type="button" class="but" value="Open window" onclick="opwin()">
+        <input type="button" class="but" value="Close window" onclick="clwin()">
+        <br><br>
+        <input type="button" class="but" id="butcls" value="Check if window is opened" onclick="checkwin()">
+        <label><h4 id="lb"></h4></label>
+        <b>Executed by Roll no.: 55</b>
+        <br><br>
+    </div>
+</body></html>
+
+

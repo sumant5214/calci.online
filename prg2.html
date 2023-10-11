@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prg 2</title>
+</head>
+<body>
+    <script>
+        function chkcb(){
+            var cb = document.getElementById("cbmain");
+            var probut = document.getElementById("butpro");
+            if(cb.checked == true){
+                probut.disabled = false;
+            }
+            else{
+                probut.disabled = true;
+            }
+        }
+    </script>
+    <b>Validating Checkbox</b>
+    <br><br>
+    <form>
+        Enter Full Name : <input type="text" id="" required>
+        <br><br>
+        Enter Email-ID : <input type="email" id="" required>
+        <br><br>
+        To read Terms of Service : <a target="_blank" href="https://policies.google.com/terms?hl=en-US">Click here</a>
+        <br><br>
+        To read Privacy Policies : <a target="_blank" href="https://policies.google.com/privacy?hl=en-US">Click here</a>
+        <br><br>
+        <input type="checkbox" id="cbmain" onclick="chkcb()"> I agree with Terms of Service and Privacy Policies
+        <br><br>
+        <input type="submit" value="Proceed" id="butpro" disabled>
+    </form>
+    <br>
+    <b>Executed by Roll No.: 55</b>
+</body>
+</html>

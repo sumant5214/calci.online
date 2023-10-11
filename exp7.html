@@ -1,0 +1,53 @@
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="exp7style.css">
+</head>
+<body>
+    <script>
+        var userdatacookie;
+        function creacookie(name,email){
+            window.document.cookie = "Name=" + name
+            userdatacookie = window.document.cookie;
+        }
+        function readcookie(){
+            var disdiv = document.getElementById("dismain");
+            var distxt = document.getElementById("inm");
+            if(window.document.cookie.length == 0){
+                distxt.innerHTML = "<font style='color:red;'>Cookie not created</font>";
+            }
+            else{
+                distxt.innerHTML = "<font style='color:green;'>" + window.document.cookie + "</font>";
+            }
+            disdiv.style.display = 'flex';
+            disdiv.style.visibility = 'visible';
+        }
+        function remreadcookie(){
+            var disdiv = document.getElementById("dismain");
+            disdiv.style.display = 'none';
+            disdiv.style.visibility = 'hidden';
+        }
+        function delcookie(){
+            window.document.cookie = userdatacookie + "=;expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            document.forms.Mform.reset();
+            
+        }
+    </script>
+    <div class="mdiv">
+        <div class="info" id="dismain">
+            <br><span id="inm"></span><br>
+        </div>
+        <form name="Mform">
+            <h4>Write a program to Create, Read and Delete Cookie</h4>   
+            <textarea name="" id="id" cols="30" rows="10"></textarea>
+            <img src="user.png" onmouseenter="readcookie()" onmouseleave="remreadcookie()">
+            Enter Name : &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" id=""><br><br>
+            Enter Email-ID : <input type="email" name="email" id=""><br><br>
+            <input type="button" value="Create" class="but" onclick="creacookie(Mform.name.value,Mform.email.value)">
+            <input type="button" value="Delete" class="but" id="butcls" onclick="delcookie()" onclick="document.forms.Mform.reset()">
+            <br><br>
+            <b>Executed by Roll no.: 55</b>
+        </form>
+    </div>
+</body>
+</html>
